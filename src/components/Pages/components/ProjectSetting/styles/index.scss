@@ -1,0 +1,116 @@
+.project-setting-wrapper {
+  width: calc(100% - 50px);
+  min-height: 100vh;
+  margin-left: 50px;
+  margin-top: 50px;
+  font-size: 14px;
+  &.menu-expand {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+  }
+  .content-header {
+    margin-top: 50px;
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    border-bottom: 1px solid #d3d5d7;
+    justify-content: space-between;
+    .header-icon-set {
+      display: flex;
+      align-items: center;
+      margin-left: 24px;
+      .header-icon-set__icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        a {
+          img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
+        }
+      }
+      .header-icon-set__text {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .setting-content-wrapper {
+    width: calc(100% - 300px);
+    background: #fff;
+    height: 100%;
+    border-left: 1px solid #d3d5d7;
+    min-height: 100vh;
+    padding: 24px;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      i {
+        font-size: 18px;
+        margin-left: 12px;
+      }
+    }
+    .back-to-project {
+      margin-top: 16px;
+      font-size: 12px;
+      display: flex;
+      cursor: pointer;
+      color: #4caf93;
+      i {
+        margin-right: 10px;
+      }
+    }
+    .project-name, .project-key, .input-date {
+      .label {
+        font-size:  13px;
+        margin-bottom: 6px;
+        >span {
+          &:nth-child(2){
+            color: red;
+            margin-left: 6px;
+          }
+        }
+      }
+      input {
+        border-radius: 4px;
+        outline: none;
+        min-width: 400px;
+        border-color: #d3d5d7;
+        height: 40px;
+        padding: 4px 12px;
+      }
+    }
+    .prj-description {
+      .label {
+        margin-top: 12px;
+      }
+      textarea {
+        min-height: 80px;
+        width: 50%;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        padding: 8px 12px;
+        border: 1px solid #d3d5d7;
+        outline: none;
+        &:focus {
+          border: 1px solid #0088ff;
+        
+        }
+      }
+    }
+    .save-btn {
+      margin-top: 40px;
+      button {
+        background-color: #0088FF;
+        padding: 4px 16px;
+        text-transform: capitalize;
+        color: #fff;
+        width: 150px;
+      }
+      
+    }
+  }
+}

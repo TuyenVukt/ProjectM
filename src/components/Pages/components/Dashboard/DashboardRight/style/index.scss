@@ -1,0 +1,109 @@
+.dashboard-right-wrapper {
+  font-size: 16px;
+  &.zoom-in {
+    height: 32px;
+    .header-left {
+      .collapse-icon {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .header-right {
+      display: none;
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    .header-left {
+      display: flex;
+      .collapse-icon {
+        i {
+          cursor: pointer;
+          font-size: 24px;
+          margin-right: 12px;
+          &:hover {
+            color: #2c9a7a;
+          }
+        }
+      }
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    .header-right {
+      display: flex;
+      .filter-project {
+        font-size: 13px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+      }
+      .options {
+        cursor: pointer;
+        position: relative;
+        min-width: 110px;
+        max-width: max-content;
+        padding: 4px 12px;
+        font-weight: 600;
+        font-size: 13px;
+        color: #666;
+        border-radius: 16px;
+        border: 1px solid #d3d5d7;
+        background-color: #fff;
+        i {
+          font-size: 14px;
+        }
+        &:hover {
+          background-color: #2c9a7a;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .list-updates {
+    margin-top: 12px;
+    .timeline-item {
+      border: 1px solid #d3d5d7;
+      border-radius: 4px;
+      background: #fff;
+      margin-bottom: 24px;
+      .timelịne-date {
+        padding: 8px 12px;
+        border-bottom: 1px solid #d3d5d7;
+        font-weight: 550;
+      }
+      .timeline__stream{
+        width: 100%;
+        padding: 12px 24px;
+        display: flex;
+        .avatar {
+          width: 60px;
+          height: 100%;
+          img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+          }
+        }
+        .right-content {
+          width: calc(100% - 60px);
+          .stream-update__text {
+            margin-bottom: 12px;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            >span {
+              &:first-child {
+                margin-right: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

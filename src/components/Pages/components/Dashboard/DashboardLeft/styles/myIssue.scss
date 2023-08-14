@@ -1,0 +1,181 @@
+.my-issue-wrapper {
+  font-size: 16px;
+  margin-top: 24px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    &.zoom-in {
+      height: 32px;
+      .header-left {
+        .collapse-icon {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .header-right {
+        display: none;
+      }
+    }
+    .header-left {
+      display: flex;
+      .collapse-icon {
+        i {
+          cursor: pointer;
+          font-size: 24px;
+          margin-right: 12px;
+          &:hover {
+            color: #2c9a7a;
+          }
+        }
+      }
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    .header-right {
+      display: flex;
+      .search {
+        height: 32px;
+        width: 32px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid #d3d5d7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        i {
+          font-size: 16px;
+          color: #777;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .list-issue {
+    margin-top: 12px;
+    border: 1px solid #d3d5d7;
+    border-radius: 4px;
+    font-size: 14px;
+    .list-issue_top {
+      padding: 12px;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #d3d5d7;
+      .filter {
+        display: flex;
+        .label {
+          font-weight: 500;
+          width: 100px;
+        }
+        .filter-item {
+          display: flex;
+          .item {
+            cursor: pointer;
+            color: #0f1824;
+            margin-right: 16px;
+            width: fit-content;
+            padding: 4px 12px;
+            border-radius: 20px;
+            &.active {
+              background: #2c9a7a;
+              color: #fff;
+            }
+          }
+        }
+        &.time {
+          margin-top: 6px;
+        }
+      }
+    }
+    .list-issue-table {
+      background-color: #fff;
+      .list-issue-header {
+        display: flex;
+        height: 40px;
+        padding: 4px 12px;
+        border-bottom: 1px solid #d3d5d7;
+        align-items: center;
+      }
+      .list-issue-content {
+        max-height: 250px;
+        overflow-y: auto;
+        .item-task {
+          display: flex;
+          height: 40px;
+          align-items: center;
+          border-bottom: 1px solid #d3d5d7;
+          &:last-child {
+            border-bottom: unset;
+          }
+        }
+      }
+      .text-key {
+        width: calc(100% / 6);
+        max-width: calc(100% / 6);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-word;
+        text-align: center;
+      }
+      .text-subject {
+        width: calc(100% / 3);
+        max-width: calc(100% / 3);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-word;
+        text-align: center;
+        &.name {
+          &:hover {
+            cursor: pointer;
+            color: #0088ff;
+            text-decoration: underline;
+          }
+        }
+      }
+      .text-priority {
+        width: calc(100% / 6);
+        text-align: center;
+      }
+      .text-status {
+        width: calc(100% / 6);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > div {
+          width: max-content;
+          padding: 2px 4px;
+          background-color: #ed8077;
+          color: #fff;
+          border-radius: 10px;
+          text-align: center;
+          min-width: 60px;
+        }
+        &.Progress {
+          > div {
+            background-color: #4488c5;
+          }
+        }
+        &.Resolved {
+          > div {
+            background-color: #5eb5a6;
+          }
+        }
+        &.Closed {
+          > div {
+            background-color: #a1af2f;
+          }
+        }
+      }
+      .text-due {
+        width: calc(100% / 6);
+        text-align: center;
+      }
+    }
+  }
+}
